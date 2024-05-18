@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Monitor",
+        "price": 500.00,
+        "imgUrl": "/imgs/monitor.png",
+        "description": "Monitor Gamer 144hz 1ms"
+    },
+    {
+        "id": 2,
+        "name": "Headphone",
+        "price": 200.00,
+        "imgUrl": "/imgs/Headphone.png",
+        "description": "Headphone Gamer 7.1"  
+    },
+    {
+        "id": 3,
+        "name": "Mouse",
+        "price": 90.00,
+        "imgUrl": "/imgs/mouseRosa.png",
+        "description": "Mouse Gamer 16000dpi"
+    },
+    {
+        "id": 4,
+        "name": "Teclado",
+        "price": 120.00,
+        "imgUrl": "/imgs/teclado.png",
+        "description": "Teclado Gamer Mecânico"
+    }
+]
