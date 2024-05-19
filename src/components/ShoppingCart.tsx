@@ -13,11 +13,7 @@ export function ShoppingCart({ isOpen}: ShoppingCartProps) {
   const { clearCart, closeCart, cartItems } = useShoppingCart()
 
   const nav = useNavigate();
-
-  // const navigate = () => {
-  //   nav(`/comprafinalizada`)
-  // }
-
+  
   const handleFinalizePurchase = () => {
     nav('/comprafinalizada', { state: { items: cartItems } })
     clearCart()
@@ -56,7 +52,7 @@ export function ShoppingCart({ isOpen}: ShoppingCartProps) {
           <Button variant="outline-danger" onClick={ () => { clearCart(), closeCart() }} disabled={isCartEmpty}>
             Cancelar Compra
           </Button>
-          <Button variant="outline-success" onClick={ () => { handleFinalizePurchase() }} disabled={isCartEmpty}>
+          <Button variant="outline-success" onClick={ handleFinalizePurchase } disabled={isCartEmpty}>
             Finalizar Compra
           </Button>
         </Stack>

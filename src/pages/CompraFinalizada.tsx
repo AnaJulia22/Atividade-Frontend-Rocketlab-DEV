@@ -1,11 +1,16 @@
-import { useLocation } from 'react-router-dom'
-import { ListGroup, ListGroupItem } from 'react-bootstrap'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { Button, ListGroup, ListGroupItem } from 'react-bootstrap'
 import { formatCurrency } from '../utilities/formatCurrency'
 import storeItems from '../data/items.json'
 
 export function CompraFinalizada() {
     const location = useLocation()
     const { items } = location.state || { items: [] }
+    const nav = useNavigate();
+
+    const navigate = () => {
+        nav(`/home`)
+    }
 
     return (
         <div>
@@ -38,6 +43,14 @@ export function CompraFinalizada() {
                     }, 0)
                 )}
             </div>
+            <Button
+                variant="link-primary"
+                size="sm"
+                onClick={navigate}
+            >
+            Continuar comprando
+            </Button>
+
         </div>
     )
 }
