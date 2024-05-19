@@ -9,5 +9,5 @@
 2. Rodar a aplicação
    
     ```sh
-    pnpm i
+    pnpm dev
     ```
