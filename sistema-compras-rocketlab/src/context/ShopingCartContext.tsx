@@ -19,6 +19,7 @@ type ShoppingCartContext = {
     decreaseCartQuantity: (id: number) => void
     removeFromCart: (id: number) => void
     getItem: (id: number) => CartItem | undefined
+    clearCart: () => void
     cartQuantity: number
     cartItems: CartItem[]
   }
@@ -42,8 +43,6 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   
     const openCart = () => setIsOpen(true)
     const closeCart = () => setIsOpen(false)
-
-    //I need to create a function that will return the item from the cart based on the id 
 
     function getItem(id: number) {
       return cartItems.find(item => item.id === id);
@@ -91,6 +90,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })
       }
 
+      function clearCart() { setCartItems([]); }
+
     return (
         <ShoppingCartContext.Provider value={{
           getItemQuantity,
@@ -100,6 +101,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
           openCart,
           closeCart,
           getItem,
+          clearCart,
           cartItems,
           cartQuantity}}>
             {children}

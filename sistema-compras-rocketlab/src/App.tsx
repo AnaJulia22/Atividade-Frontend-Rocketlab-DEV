@@ -4,6 +4,7 @@ import { Home } from "./pages/Home"
 import { Navbar } from "./components/Navbar"
 import { ShoppingCartProvider } from "./context/ShopingCartContext"
 import { About } from "./pages/About"
+import { CompraFinalizada } from "./pages/CompraFinalizada"
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about/:id" element={<About />} />
+        <Route path="/comprafinalizada" element={<CompraFinalizada />} />
         </Routes>
       </Container>
     </ShoppingCartProvider>

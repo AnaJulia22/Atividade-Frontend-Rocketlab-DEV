@@ -10,7 +10,7 @@ const ItemCard = ({ item }) => {
         }
 
         return (
-            <div key={item.id} id="album-info">
+            <div key={item.id}>
                 <img onClick={handleClick} src={item.image} alt={item.item} />
                 {visibleDetails ? <InfoItem id={item.id} /> : ""}
             </div>
